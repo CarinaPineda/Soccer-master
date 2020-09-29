@@ -85,8 +85,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpGoals(String, String)
      */
     @Override
-    public boolean bumpGoals(String firstName, String lastName) {
-        return false;
+    public boolean bumpGoals(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpGoals();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -95,8 +105,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpAssists(String, String)
      */
     @Override
-    public boolean bumpAssists(String firstName, String lastName) {
-        return false;
+    public boolean bumpAssists(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpAssists();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -105,8 +125,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpShots(String, String)
      */
     @Override
-    public boolean bumpShots(String firstName, String lastName) {
-        return false;
+    public boolean bumpShots(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpShots();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -115,8 +145,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpSaves(String, String)
      */
     @Override
-    public boolean bumpSaves(String firstName, String lastName) {
-        return false;
+    public boolean bumpSaves(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpSaves();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -125,8 +165,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpFouls(String, String)
      */
     @Override
-    public boolean bumpFouls(String firstName, String lastName) {
-        return false;
+    public boolean bumpFouls(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpFouls();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -135,8 +185,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpYellowCards(String, String)
      */
     @Override
-    public boolean bumpYellowCards(String firstName, String lastName) {
-        return false;
+    public boolean bumpYellowCards(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpYellowCards();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -145,8 +205,18 @@ public class SoccerDatabase implements SoccerDB {
      * @see SoccerDB#bumpRedCards(String, String)
      */
     @Override
-    public boolean bumpRedCards(String firstName, String lastName) {
-        return false;
+    public boolean bumpRedCards(String firstName, String lastName)
+    {
+        String key = firstName+"##"+lastName;
+        if(playerStats.containsKey(key))
+        {
+            playerStats.get(key).bumpRedCards();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
