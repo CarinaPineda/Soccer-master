@@ -201,7 +201,7 @@ public class SoccerDatabase implements SoccerDB {
             {
                SoccerPlayer player = players.nextElement();
 
-               if(player.getTeamName() == teamName)
+               if(player.getTeamName().equals(teamName))
                {
                    count++;
                }
